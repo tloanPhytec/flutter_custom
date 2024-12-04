@@ -30,8 +30,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _toggleGPIO() async {
     String command = _isToggled
-        ? 'gpioset -z -c gpiochip4 26=1 ; killall gpioset'
-        : 'gpioset -z -c gpiochip4 26=0 ; killall gpioset';
+        ? "gpioset -z -c gpiochip4 26=1 ; killall gpioset"
+        : "gpioset -z -c gpiochip4 26=0 ; killall gpioset";
 
     try {
       await shell.run(command);
